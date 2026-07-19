@@ -141,3 +141,7 @@ npm run typecheck   # strict TS check
 npm run lint         # ESLint
 npm run build        # production build to dist/
 ```
+
+# Barakah-OS.
+Islamic Personal Finance Operating System
+
