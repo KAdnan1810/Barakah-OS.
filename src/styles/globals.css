@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light theme — Apple/Notion inspired: warm neutral base, restrained accents */
+    --background: 0 0% 100%;
+    --foreground: 224 15% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 15% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 15% 12%;
+
+    --primary: 158 64% 32%;         /* deep emerald — halal/growth */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 20% 96%;
+    --secondary-foreground: 224 15% 20%;
+
+    --muted: 220 20% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 220 20% 95%;
+    --accent-foreground: 224 15% 12%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 16% 90%;
+    --input: 220 16% 90%;
+    --ring: 158 64% 32%;
+
+    --halal: 158 64% 32%;
+    --halal-foreground: 0 0% 100%;
+    --gold: 38 68% 48%;
+    --gold-foreground: 0 0% 100%;
+
+    --success: 158 64% 32%;
+    --warning: 38 92% 50%;
+    --danger: 0 72% 51%;
+
+    --chart-1: 158 64% 32%;
+    --chart-2: 38 68% 48%;
+    --chart-3: 210 70% 50%;
+    --chart-4: 280 40% 55%;
+    --chart-5: 340 60% 55%;
+
+    --radius: 0.875rem;
+  }
+
+  .dark {
+    /* Dark theme — near-black, glassy surfaces */
+    --background: 224 20% 7%;
+    --foreground: 210 15% 92%;
+
+    --card: 224 18% 10%;
+    --card-foreground: 210 15% 92%;
+
+    --popover: 224 18% 9%;
+    --popover-foreground: 210 15% 92%;
+
+    --primary: 158 55% 45%;
+    --primary-foreground: 224 20% 7%;
+
+    --secondary: 224 15% 15%;
+    --secondary-foreground: 210 15% 92%;
+
+    --muted: 224 15% 15%;
+    --muted-foreground: 217 10% 62%;
+
+    --accent: 224 15% 16%;
+    --accent-foreground: 210 15% 92%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 210 15% 92%;
+
+    --border: 224 15% 18%;
+    --input: 224 15% 18%;
+    --ring: 158 55% 45%;
+
+    --halal: 158 55% 45%;
+    --halal-foreground: 224 20% 7%;
+    --gold: 38 72% 58%;
+    --gold-foreground: 224 20% 7%;
+
+    --success: 158 55% 45%;
+    --warning: 38 92% 58%;
+    --danger: 0 62% 55%;
+
+    --chart-1: 158 55% 45%;
+    --chart-2: 38 72% 58%;
+    --chart-3: 210 70% 60%;
+    --chart-4: 280 50% 65%;
+    --chart-5: 340 65% 62%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv11", "ss01";
+    text-rendering: optimizeLegibility;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-card/70 backdrop-blur-xl border border-border/60;
+  }
+
+  .glass-strong {
+    @apply bg-card/90 backdrop-blur-2xl border border-border/50 shadow-glass;
+  }
+
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}
